@@ -137,67 +137,31 @@ public class question1 extends javax.swing.JFrame {
     }//GEN-LAST:event_aActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
-        if(d.isSelected()){
-            
-            pontos.setText("10");
-            a.setSelected(false);
-            b.setSelected(false);
-            c.setSelected(false);
-            
-            //QUESTÃO 2
+        int vida=3,score=0;
+        if(vida > 0){
+            if(d.isSelected()){
+            score = score + 10;
+            pontos.setText(Integer.toString(score));
+            //Questão 2
             titulo.setText("Questão 2");
             perg.setText("O que é CSS?");
-            a.setText("Uma folha de estilo em cascata");
-            b.setText("");
-            c.setText("");
+            a.setText("Estilo de folha em cascata");
+            b.setText("Linguagem de Programação");
+            c.setText("Sistema Gerenciador de Banco de Dados");
             d.setText("");
-            
-            if(a.isSelected()){
-                
-                pontos.setText("20");
-                b.setSelected(false);
-                c.setSelected(false);
-                d.setSelected(false);
-                
-                //QUESTÃO 3
-                titulo.setText("Questão 3");
-                perg.setText("");
+            }else{
+                vida--;
+                vidas.setText(Integer.toString(vida));
+                //Questão 2
+                titulo.setText("Questão 2");
+                perg.setText("O que é CSS?");
                 a.setText("");
                 b.setText("");
                 c.setText("");
                 d.setText("");
-                
-            }else{
-                vidas.setText("2");
             }
         }else{
-            vidas.setText("2");
-            titulo.setText("Questão 2");
-            perg.setText("O que é CSS?");
-            a.setText("Uma folha de estilo em cascata");
-            b.setText("");
-            c.setText("");
-            d.setText("");
-            
-            if(a.isSelected()){
-                
-                pontos.setText("20");
-                b.setSelected(false);
-                c.setSelected(false);
-                d.setSelected(false);
-                
-                //QUESTÃO 3
-                titulo.setText("Questão 3");
-                perg.setText("");
-                a.setText("");
-                b.setText("");
-                c.setText("");
-                d.setText("");
-                
-            }
-            
-            
+            System.exit(0);
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
